@@ -1,0 +1,1 @@
+exports = f1 = () => console.log('f1');
