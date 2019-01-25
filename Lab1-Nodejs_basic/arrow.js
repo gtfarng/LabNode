@@ -1,20 +1,19 @@
 
-//non-arrow
-function Add(x)
+//non-arrow curry function
+function Add_N(x)
 {
      return function(y)
       { 
-      	return x+y
+      	return x+y;
       }
 };
-//z = Add(2);
-//z(3)
+console.log("Add function model non-arrow curry function : "+Add_N(2)(3));
 
-console.log(Add(2)(3));
-//traditional
-function Add1(x,y)
+//traditional fuction
+function Add_T(x,y)
 {
      return x+y;
       
 };
-console.log(Add1(2,3));
+console.log("Add function model traditional fuction : "+Add_T(2,3));
+
