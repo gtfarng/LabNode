@@ -1,6 +1,7 @@
 //Palindrome non case sensitive && Palindrome case sensitive
 console.log("Enter your message: ");
-objPalindrome={ palindrome_sen(str1) 
+objPalindrome={ //Palindrome case sensitive
+              palindrome_sen(str1) 
  				{      var re = /[^A-Za-z0-9]/g;
       				 str = str1.replace(re, '');
       				 var len = str1.length;
@@ -15,6 +16,7 @@ objPalindrome={ palindrome_sen(str1)
       					ans="This message is  Palindrome <case sensitive>"
       					return ans;
  				},
+        //Palindrome non case sensitive
         palindrome_nosen(str2) 
         {      var re = /[^A-Za-z0-9]/g;
                str2 = str2.toLowerCase().replace(re, '');

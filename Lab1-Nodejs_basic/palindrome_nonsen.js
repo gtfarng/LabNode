@@ -1,4 +1,4 @@
-Palindrome non case sensitive
+//Palindrome non case sensitive
 console.log("Enter your message: ");
 objPalindrome={ palindrome(str) 
  				{    var re = /[^A-Za-z0-9]/g;
