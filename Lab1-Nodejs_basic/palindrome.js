@@ -12,4 +12,12 @@ function palindrome(str)
      return true;
 }
 
-console.log(palindrome("acbBCAA"));
+console.log(palindrome("Jatupat"));
+/*
+let stdin = process.openStdin()
+stdin.addListener("data", function(data)  
+{
+console.log(palindrome(data));
+
+});
+*/
