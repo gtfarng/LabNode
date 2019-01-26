@@ -1,0 +1,1 @@
+module.exports.BMI = (w) => (h)	=> w/(h*h)
