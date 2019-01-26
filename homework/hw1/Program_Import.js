@@ -6,10 +6,12 @@ f1();*/
 let l1 = require('./lib/libBMI.js');
 let l2 = require('./lib/libFactorial.js');
 let l3 = require('./lib/libDayc.js');
+//let l4 = require('./lib/libTest.js');
 
 var num=8,fac=1
 var w=55,h=1.70
 var Day=365
+//var a=1,b=2,c=3,d=4
 //console.log(l1.myfoo());
 //console.log(l1.sum3(1)(2)(3));
 
@@ -35,6 +37,16 @@ console.log(+num+"! <Factorial> = "+l2.factorial(num)(fac));
 //Program3 Day Convert
 console.log("\n")
 console.log("Program 3 : Day Convert ")
-console.log(+l3.Dayc(Day));
+console.log("\n\nComplete == "+l3.Dayc(Day));
 
+/*
+//Program4 Test
+console.log("\n")
+console.log("Program 4 : Test ")
+console.log("Total = "+l4.Test(a)(b)(c)(d));
+console.log("A = "+a);
+console.log("B = "+b);
+console.log("C = "+c);
+console.log("D = "+d);
+*/
 
