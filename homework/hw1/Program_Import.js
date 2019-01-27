@@ -37,8 +37,8 @@ console.log(+num+"! <Factorial> = "+l2.factorial(num)(fac));
 //Program3 Day Convert
 console.log("\n")
 console.log("Program 3 : Day Convert ")
-console.log("\n\nComplete == "+l3.Dayc(Day));
-
+//console.log("\n\nComplete == "+l3.Dayc(Day));
+l3.Dayc(Day)
 /*
 //Program4 Test
 console.log("\n")
