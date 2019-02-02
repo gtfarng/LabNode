@@ -1,8 +1,6 @@
 var net = require('net');
 //var HOST = 'coc.waterphuket.com';
-//var HOST = 'localhost';
-//var HOST = '68.183.187.22';
-var HOST = 'guess-game.ddns.net';
+var HOST = 'localhost';
 var PORT = 6969;
 var answer = 0;
 var client = new net.Socket();
@@ -31,6 +29,39 @@ client.on('data', function(data)
 	else if(data == 'BINGO!')
 	{
 		console.log('You Winner!');
+		 		
+ 			const request = require('request')
+
+ 			request(
+ 			{
+   				method: 'POST',
+   				uri: 'https://notify-api.line.me/api/notify',
+   				header: 
+   				{
+     				'Content-Type': 'application/x-www-form-urlencoded',
+   				},
+   				auth: 
+   				{
+     				bearer: 'J8lsL9oRiCUfdgs9H5c4eu0K6XiyuExvn7Vn0NU1M51', //token
+   				},
+  				form: 
+  				{
+     				message: 'You Winner!', 
+   				},
+ 			}, 
+ 			(err, httpResponse, body) => 
+ 			{
+   		 	if (err)  	
+   		 	 	{
+     				console.log(err)
+   				} 
+   			else 
+   			 	{
+     				console.log(body)
+   				}
+ 			})
+
+
 		client.destroy()
 	}
 	else if(data == 'END!')
