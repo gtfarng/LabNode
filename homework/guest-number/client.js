@@ -8,7 +8,7 @@ var client = new net.Socket();
 client.connect(PORT, HOST, function() 
 {
   	console.log('CONNECTED TO: ' + HOST + ':' + PORT);
-  	client.write('5x35512002');
+  	client.write('5735512002');
 });
 
 client.on('data', function(data) 
@@ -16,26 +16,27 @@ client.on('data', function(data)
 	console.log('Server: ' + data);
 
 	console.log(answer)
-	if(data=='OK')
+	if(data=='OK!')
 	{
 		answer=Math.floor(Math.random() * 21);
 		client.write(answer.toString());
 	}
-	else if(data=='WRONG')
+	else if(data=='WRONG!')
 	{
 		answer=Math.floor(Math.random() * 21);
 		client.write(answer.toString());
 	}
-	else if(data == 'BINGO')
+	else if(data == 'BINGO!')
 	{
+		console.log('You Winner!');
 		client.destroy()
 	}
-	else if(data == 'END')
+	else if(data == 'END!')
 	{
 		client.destroy()
 		client.connect(PORT, HOST, function() {
 		 console.log('CONNECTED TO: ' + HOST + ':' + PORT);
- 		client.write('5x35512002');
+ 		client.write('5735512002');
 		});
 	}
 

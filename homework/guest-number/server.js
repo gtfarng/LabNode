@@ -22,17 +22,17 @@ server.on('connection', function(sock)
  		{
  			if(ans==answer)
  			{
- 				sock.write("BINGO");
+ 				sock.write("BINGO!");
  				console.log('\n\nServer listening on ' + HOST +':'+ PORT);
  			}
  			else 
  			{ 	if(i<5)
  				{
- 					sock.write("WRONG");
+ 					sock.write("WRONG!");
  				}
  				else
  				{
- 					sock.write("END");
+ 					sock.write("END!");
  					i=0,sub=0;
  					//console.log('Server listening on ' + HOST +':'+ PORT);
  					sock.on('close', function(data) 
@@ -46,12 +46,9 @@ server.on('connection', function(sock)
  		else
  		{   
  			console.log("\n\nAnswer on server = "+answer);
- 			sock.write("OK");
+ 			sock.write("OK!");
  			i=1,sub=1;
- 		}
-        	
+ 		}  	
  	});
-
- 	
 });
 console.log('Server listening on ' + HOST +':'+ PORT);
