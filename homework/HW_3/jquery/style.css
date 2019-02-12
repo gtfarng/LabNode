@@ -1,0 +1,158 @@
+/*body {
+  background-color: #87CEFA;
+}
+
+h1 {
+  color: FF1493;
+  text-align: center;
+  font-family: Lucida Console;
+}
+
+h2 {
+  color: 191970;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  color: 708090;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: left;
+}
+
+p {
+  font-family: Georgia;
+  font-size: 16px;
+  text-align: justify;
+  color:C71585;
+}
+*/
+#button{
+  text-align: center;
+  font-size: 16px;
+  color:black
+  font-family: Lucida Console;
+}
+
+#head{
+  text-align: center;
+  font-size: 45px;
+  color:483D8B;
+  font-family: Verdana;
+}
+
+#name1{
+  text-align: center;
+  font-size: 30px;
+  color:008B8B;
+  font-family: Courier New;
+}
+
+#name2{
+  text-align: center;
+  font-size: 25px;
+  color:191970;
+  font-family: Courier New;
+}
+
+#story{
+  text-align: justify;
+  font-size: 25px;
+  color:191970;
+  font-family: Courier New;
+}
+.table{
+  text-align: center;
+  font-size: 18px;
+  color:000000;
+  font-family: Verdana;
+  text-align:left;
+
+}
+.table1{
+  text-align: left;
+  font-size: 16px;
+  color:000080;
+  font-family: Verdana;
+  text-align:left
+ 
+}
+
+.table2{
+  text-align:left
+}
+
+.table3{
+  text-align:right
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+ 
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+#holder_swap{
+   margin:auto;
+   width: 519px;
+   margin-top:50px;
+   background-color:#FFF;      
+}
+/* css ส่วนกำหนดขอบเขตการแสดง  */
+.wrap_swap{
+   width: 519px;
+   height: 854px; 
+   color: #5A5858;
+   display: block;
+   font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+   font-size:12px;   
+}
+/* css ส่วนสำหรับหัวข้อ  */
+.heading{
+   border-bottom:1px black dotted;
+   margin:0;
+   padding:10px 0px 3px;
+   width: 519px;
+   height:16px;
+   clear: both;
+   color: #5A5858;
+   display: block;   
+   font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+   font-size:12px;
+   font-weight:bold;   
+   background-color:#FFF;      
+}
+/* css ส่วนสำหรับรายการแสดงแต่ละรายการ */
+.item_swap{
+   border-bottom:1px black dotted;
+   margin:0;
+   padding:10px 0px 3px;
+   width: 519px;
+   height:60px;
+   clear: both;
+   color: #5A5858;
+   display: block;   
+   font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+   font-size:12px;
+}
+.bg {
+   position:fixed; 
+   top:0; 
+   left:0; 
+   width:20%; 
+   height:20%;
+}

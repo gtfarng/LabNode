@@ -1,0 +1,118 @@
+body {
+  background-color: #87CEFA;
+}
+
+h1 {
+  color: FF1493;
+  text-align: center;
+  font-family: Lucida Console;
+}
+
+h2 {
+  color: 191970;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  color: 708090;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: left;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+
+
+
+
+#head{
+  text-align: center;
+  font-size: 45px;
+  color:483D8B;
+  font-family: Lucida Console;
+}
+
+#name1{
+  text-align: center;
+  font-size: 30px;
+  color:008B8B;
+  font-family: Courier New;
+}
+
+#name2{
+  text-align: center;
+  font-size: 25px;
+  color:191970;
+  font-family: Courier New;
+}
+.table{
+  text-align: center;
+  font-size: 18px;
+  color:000000;
+  font-family: Verdana;
+  text-align:left;
+
+}
+.table1{
+  text-align: left;
+  font-size: 18px;
+  color:000080;
+  font-family: Verdana;
+  text-align:left
+   font-weight: bold;
+}
+
+
+#new{
+ 	color: pink;
+ 	font-size:30px;
+ 	text-align: center;
+
+}
+#test{
+  text-align: center;
+  font-size: 40px;
+  color:red;
+  font-family: Courier New;
+}
+
+
+
+#test1{
+	text-align: center;
+	font-size: 40px;
+	color:yellow;
+}
+
+.test1{
+	text-align: center;
+	font-size: 40px;
+	color:yellow;
+}
+
+ 
+
+p {
+  font-family: Georgia;
+  font-size: 16px;
+  text-align: justify;
+  color:C71585;
+}
