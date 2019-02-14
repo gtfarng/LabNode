@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 
-class App extends Component 
-{
+class Counter extends Component{
+
   state = { count:0 }
-  
+  /*
   constructor(props) 
   {
     super(props)
     //this.add = this.add.bind(this)
- }
+ }*/
    /*
    add = function() 
   {
@@ -37,17 +37,19 @@ class App extends Component
   render() 
   {
     return (
-      <div className="App">
-      <h1>Counter</h1>
-      {this.state.count} <br/>
-      <br></br>
-      <button onClick={this.add}>Add</button>
-      <button onClick={this.delete}>Delete</button>
+      <div>
+
+      <h1 class='head'>Counter</h1>
+      {this.state.count}<br/>
+
+      <br/><button class="button" onClick={this.add}>Add</button>
+      <button class="button"  onClick={this.delete}>Delete</button>
+      
        </div>
-            );
-    }
+
+            )}
 }
 
-export default App;
+export default Counter;
 
 
