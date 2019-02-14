@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Notification
+        </title>
+        <script>
+            notifyMe =() => 
+            {      
+             if (!("Notification" in window)) 
+             {
+                alert("This browser does not support desktop notification");
+             }
+            else if (Notification.permission === "granted") 
+            {
+            
+                var notification = new Notification("Mindphp!");
+            }
+            else if (Notification.permission !== "denied") 
+            {        
+                Notification.requestPermission(function(permission) 
+                {
+                     if (permission === "granted") 
+                    {                   
+                      var notification = new Notification("Mindphp!");
+                    }
+                });
+            }
+      }
+
+      function lookup(za) {
+   
+      if(za.length == 0) {
+         // Hide the suggestion box.
+         $('#suggestions').hide();
+      } else {
+         $.post("inven.php", {queryString: ""+za+""}, function(data){
+            if(data.length >0) {
+               $('#suggestions').show();
+               $('#autoSuggestionsList').html(data);
+            }
+         });
+      }
+   } // lookup
+   
+   function fill(thisValue) {
+      $('#za').val(thisValue);
+      setTimeout("$('#suggestions').hide();", 200);
+   }
+ข้างบน
+
+        </script>
+    </head>
+    <body>
+        <button onclick="notifyMe()">Notification</button>
+        <input type="text" name="za[]" id="za" onKeyUp="lookup(this.value);" onBlur="fill();">
+    </body>
+</html>

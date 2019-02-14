@@ -1,0 +1,41 @@
+<head​>  
+<​link​ ​rel=​"stylesheet"​ ​type=​"text/css"​ ​href=​"mystyle.css"​>  
+<​style​>  
+h1 ​{     ​
+	color:​ orange;  
+}  
+</style​>  
+<​/head​>     
+p ​{     ​
+	margin-top:​ 100px;     ​
+	margin-bottom:​ 100px;     ​
+	margin-right:​ 150px;     ​
+	margin-left:​ 80px;  
+}     
+
+p ​{     ​
+	padding-top:​ 50px;     ​
+	padding-right:​ 30px;     ​
+	padding-bottom:​ 50px;     ​
+	padding-left:​ 80px;  
+}     
+
+p ​{     ​
+	padding:​ 50px 30px 50px 80px;  
+}     
+
+div ​{     ​
+	width:​ 500px;     ​
+	height:​ 100px;     ​
+	border:​ 3px solid #73AD21;  
+}       
+
+ul ​{     ​
+	background:​ #3399ff;     ​
+	padding:​ 20px;  
+}     
+
+ul li ​{     ​
+	background:​ #cce5ff;     ​
+	margin:​ 5px;  
+} 

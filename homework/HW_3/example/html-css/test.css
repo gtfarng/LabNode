@@ -1,0 +1,27 @@
+/*-- Element selector */
+
+p ​{     ​
+	text-align:​ center;     ​
+	color:​ red;  
+}  
+
+/* Id selector:  */
+#para1 ​{     ​
+	text-align:​ center;     ​
+	color:​ red;  
+}  
+
+/*Class selector*/
+.center ​{     ​
+	text-align:​ center;     ​
+	color:​ red;  
+}  
+/*Grouping*/  
+h1, h2, p ​{     ​
+	text-align:​ center;      ​
+	color:​ red;  
+} 
+ 
+div ​{  ​
+	text-align​: ​center​; 
+} 

@@ -1,0 +1,11 @@
+p {
+  background-color: grey;
+  color: #ddf;
+  padding: 15px;
+}
+ul {
+  background-color: grey;
+}
+li {
+  color: #ddf;
+}

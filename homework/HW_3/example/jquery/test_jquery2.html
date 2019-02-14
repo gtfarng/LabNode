@@ -1,0 +1,22 @@
+<html>
+<head>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+ window.onload = function() {
+ $("#id1").text("successfully Load Id1");
+ }
+$("#id2").text("successfully Load Id2"); // Not execute since DOM is not
+ready yet (under head, before <p> not work too)
+ $("#id3").text("successfully Load Id3");
+ $("div").text("New DIV area");
+</script>
+</head>
+<body>
+<p id="id1"> Hello world</p>
+<p id="id2"> Hello world</p>
+<p id="id3"> Hello world</p>
+<div> DIV Area </div>
+<div id="d1"> DIV Area </div>
+</body>
+</html>

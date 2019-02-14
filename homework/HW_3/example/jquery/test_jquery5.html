@@ -1,0 +1,35 @@
+<html>
+<head>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+ $(function () {
+ $("#b1").click( function () {
+ $("#id3").hide(2000);
+ $("#id3").show('normal'); // slow, normal, fast
+ });
+ });
+ $(function () {
+ $("#b2").click( function () {
+ $("#id4").toggle('slow', function() {
+ 	var test = $(this).css('display');
+ if (test == 'none')
+ alert('hide');
+ else
+ alert('show')
+ })
+ });
+ });
+</script>
+</head>
+<body>
+<p id="id1"> Hello world</p>
+<p id="id2"> Hello world</p>
+<p id="id3"> Hello world</p>
+<p id="id4"> Hello world</p>
+<div> DIV Area </div>
+<div id="d1"> DIV Area </div>
+<button id="b1"> Show/Hide </button>
+<button id="b2"> Toggle </button>
+</body>
+</html>

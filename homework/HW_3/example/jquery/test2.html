@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test jquery</title>
+</head>
+<body>
+
+<p id="myId1" align="center"> Hello id1 </p>
+<p id="myId2"> Hello id2 </p>
+
+<ul id="myul">
+ 	<li><a href='#'><b>Menu1</b></a></li>
+ 	<li><a href='#'>Menu2</a></li>
+</ul>
+
+<script>
+ var p1 = document.getElementById("myId1");
+ console.log(p1);
+ console.log(p1.getAttribute("align"));
+ p1.setAttribute("align","right");
+ console.log(p1.getAttribute("align"));
+ var li = document.getElementsByTagName("li");
+ console.log("li.length:" + li.length);
+ console.log("li[0].innerHTML:" + li[0].innerHTML );
+ console.log("li[1].innerHTML:" + li[1].innerHTML );
+ li[0].innerHTML = "New Menu1";
+ var ul = document.getElementById("myul");
+ var newLi = document.createElement("li");
+ ul.appendChild(newLi);
+ newLi.innerHTML = 'Menu3';
+</script>
+
+</body>
+
+</html>

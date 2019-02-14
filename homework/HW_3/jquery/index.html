@@ -9,10 +9,9 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.min.js"></script>
 
-  <script>
+<script>
 $(document).ready(() =>
 {
-
   $("#btn1-1").click(() =>
   {
     $("#div1").slideUp();
@@ -28,13 +27,6 @@ $(document).ready(() =>
     $("#div1").slideToggle();
   });
 
-});
-</script>
-
-<script>
-$(document).ready(() =>
-{
-
   $("#btn2-1").click(() =>
   {
     $("#div2").slideUp();
@@ -44,14 +36,6 @@ $(document).ready(() =>
   {
     $("#div2").slideDown();
   });
-
-  
-});
-</script>
-
-<script>
-$(document).ready(() =>
-{
 
   $("#btn3-1").click(() =>
   {
@@ -67,10 +51,8 @@ $(document).ready(() =>
   {
     $("#div3").slideToggle();
   });
-
 });
 </script>
-
 
 <script>
 home=()=> 
@@ -125,7 +107,7 @@ notifyMe =() =>
 }
 </script>
 
-<script type="text/javascript">
+<script>
 var delay = 5000; 
 var count = 19; 
 var showing = 10; 
@@ -156,6 +138,24 @@ $(() =>
 });
 </script>
 
+<script>
+  $(() =>  
+  {
+    var $images = $("#d1 > .c1 > a").clone();
+    var $length = $images.length;
+    var $imgShow = 0;
+
+    $("#d1 > .c1").html($("#d1 > .c1 > a:first")); //hide picture
+
+    $("#d1 > .c1 > a").click(function(event) 
+    {
+      $(this).children().attr("src",
+        $("img", $images).eq(++$imgShow % $length).attr("src"));
+      event.preventDefault();
+    });
+  });
+</script>
+
 </head>
 
 <body class="p-3 mb-2 bg-light text-dark">
@@ -173,21 +173,43 @@ $(() =>
 
 <button type="button" class="btn btn-danger"><a href="../jquery/index.html"><h5 class="bg-danger text-white">jQuery
 </h5></button></a>
- </div></div>
 
+<button type="button" class="btn btn-outline-dark">
+  <a href="https://counter-react-app-ba5bd.firebaseapp.com/">
+  <h5>Counter-App
+</h5></button></a>
+
+<button type="button" class="btn btn-outline-dark">
+  <a href="https://todo-react-app-8c02b.firebaseapp.com/">
+  <h5>Todo-App
+</h5></button></a>
+
+<button type="button" class="btn btn-outline-dark">
+  <a href="https://github-react-app-e7294.firebaseapp.com/">
+  <h5>Github-API-App
+    </h5></button></a>
+
+</div>
 <!--
 <button type="button" class="btn btn-outline-primary">Primary</button>
 <button type="button" class="btn btn-outline-success">Success</button>
 <button type="button" class="btn btn-outline-warning">Warning</button>
 <button type="button" class="btn btn-outline-danger">Danger</button>
 -->
-   <br><br>
+
+
+
+
+   <br>
 <div class="row">
   <div class="col-sm-12 text-primary " id="head" align="center"><h1 class="display-4">Profile Webpage</h1></div>
 </div>
 <br>
 
-<div class="container" align="center">           
+<div class="container" align="center">     
+<div class="div"> 
+     
+  </div>
   <img src="https://avatars0.githubusercontent.com/u/26571842?s=400&u=f2b1d39df6dda3a35061c32b1e98d5ba1facf06f&v=4" class="img-thumbnail" alt="#GTfarng" width="300" height="250"> 
 </div>
 
@@ -204,6 +226,14 @@ $(() =>
    </div>
 
 </div>
+<br>
+<div id="d1" align="center" >
+        <div class="c1">
+                 <a href="#"><img src="./PSUs.png" border="0" height="150" width="200"></a>
+                 <a href="#"><img src="./coe.jpg" border="0" height="150" width="200"></a>
+                 <a href="#"><img src="./coc.png" border="0" height="150" width="200"></a>       
+        </div>
+     </div>
 
 <br>
 
@@ -322,6 +352,11 @@ $(() =>
         </ol>
     </div>
   </div>
+<br>
+<div class="container" align="center"> 
+  <img class="App-logo1" id="roll" src="roll.png" border="0" height="350" width="300">
+  <img class="App-logo2" id="roll1" src="roll1.png" border="0" height="350" width="300"><br><br>
+</div><br>
 
  <div id="div2">
 <div class="card-group" >

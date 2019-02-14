@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>slide up slide down and fade</title>
+<style type="text/css">
+body{
+   background-color:#0E97C5;   
+}
+/* css ส่วนนอกสุดของเนื้อหานี้ */
+div#holder_swap{
+   margin:auto;
+   width: 519px;
+   margin-top:50px;
+   background-color:#FFF;      
+}
+/* css ส่วนกำหนดขอบเขตการแสดง  */
+div.wrap_swap{
+   width: 519px;
+   height: 854px; 
+   color: #5A5858;
+   display: block;
+   font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+   font-size:12px;   
+}
+/* css ส่วนสำหรับหัวข้อ  */
+div.heading{
+   border-bottom:1px black dotted;
+   margin:0;
+   padding:10px 0px 3px;
+   width: 519px;
+   height:16px;
+   clear: both;
+   color: #5A5858;
+   display: block;   
+   font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+   font-size:12px;
+   font-weight:bold;   
+   background-color:#FFF;      
+}
+/* css ส่วนสำหรับรายการแสดงแต่ละรายการ */
+div.item_swap{
+   border-bottom:1px black dotted;
+   margin:0;
+   padding:10px 0px 3px;
+   width: 519px;
+   height:60px;
+   clear: both;
+   color: #5A5858;
+   display: block;   
+   font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+   font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+
+<!--ส่วนของเนื้อหาสำหรับทดสอบ-->
+<div id="holder_swap">
+     <div class="heading">
+            Header
+        </div>
+        <div class="wrap_swap">
+<div id="recent29" style="display:none;" class="item_swap" >This is a test test 29</div>
+<div id="recent28" style="display:none;" class="item_swap" >This is a test test 28</div>
+<div id="recent27" style="display:none;" class="item_swap" >This is a test test 27</div>
+<div id="recent26" style="display:none;" class="item_swap" >This is a test test 26</div>
+<div id="recent25" style="display:none;" class="item_swap" >This is a test test 25</div>
+<div id="recent24" style="display:none;" class="item_swap" >This is a test test 24</div>
+<div id="recent23" style="display:none;" class="item_swap" >This is a test test 23</div>
+<div id="recent22" style="display:none;" class="item_swap" >This is a test test 22</div>
+<div id="recent21" style="display:none;" class="item_swap" >This is a test test 21</div>
+<div id="recent20" style="display:none;" class="item_swap" >This is a test test 20</div>
+<div id="recent19" style="display:none;" class="item_swap" >This is a test test 19</div>
+<div id="recent18" style="display:none;" class="item_swap" >This is a test test 18</div>
+<div id="recent17" style="display:none;" class="item_swap" >This is a test test 17</div>
+<div id="recent16" style="display:none;" class="item_swap" >This is a test test 16</div>
+<div id="recent15" style="display:none;" class="item_swap" >This is a test test 15</div>
+<div id="recent14" style="display:none;" class="item_swap" >This is a test test 14</div>
+<div id="recent13" style="display:none;" class="item_swap" >This is a test test 13</div>
+<div id="recent12" style="display:none;" class="item_swap" >This is a test test 12</div>
+<div id="recent11" style="display:none;" class="item_swap" >This is a test test 11</div>
+<div id="recent10" style="display:none;" class="item_swap" >This is a test test 10</div>
+<div id="recent9" style="display:none;" class="item_swap" >This is a test test 9</div>
+<div id="recent8" style="display:none;" class="item_swap" >This is a test test 8</div>
+<div id="recent7" style="display:none;" class="item_swap" >This is a test test 7</div>
+<div id="recent6" style="display:none;" class="item_swap" >This is a test test 6</div>
+<div id="recent5" style="display:none;" class="item_swap" >This is a test test 5</div>
+<div id="recent4" style="display:none;" class="item_swap" >This is a test test 4</div>
+<div id="recent3" style="display:none;" class="item_swap" >This is a test test 3</div>
+<div id="recent2" style="display:none;" class="item_swap" >This is a test test 2</div>
+<div id="recent1" style="display:none;" class="item_swap" >This is a test test 1</div>
+<div id="recent0" style="display:block;" class="item_swap" >This is a test test 0</div>
+        </div>
+</div>
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+var delay = 5000; // ลูกเล่นทำงานทุกๆ 5 วินาที
+var count = 30; // จำนวนรายการที่นำมาแสดงทั้งหมด
+var showing = 4; //  สำหรับ index ค่าของรายการที่จะแสดงเริ่มต้น  สอดคล้องกับ $i<11
+var i = 0; // เก็บค่า index รายการ
+var shift_box;    //  สำหรับเก็บฟังก์ฃัน การเลื่อนสลับ แสดง
+var move_box; // สำหรับเก็บฟังก์ฃันซ่อนรายการ
+
+function move_box(i)
+{
+   return function() {
+     $('#recent'+i).remove().css('display', 'none').prependTo('.wrap_swap');
+   }
+}
+function shift_box() 
+{
+   var toShow = (i + showing) % count; // วนลูปเพิ่ม ลด index ลำดับค่ารายการที่จะแสดง ได้ค่าระหว่าง 0-29
+   // ลูกเล่นส่วนที่จะแสดง
+   $('#recent'+toShow).slideDown(1000,move_box(i));
+   // ลูกเล่น ส่วนที่จะทำการซ่อน
+   $('#recent'+i).slideUp(1000,move_box(i));
+   i = (i + 1) % count; // วนลูปเพิ่มลด ค่า i จะได้ค่าตั้งแต่ 0-29
+   setTimeout('shift_box()', delay); // กำหนดให้ทำงานหลังจาก 5 วินาที
+}    
+
+$(function()
+{
+    setTimeout('shift_box()', delay); // กำหนดให้ทำงานหลังจาก 5 วินาที
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+ window.onload = function() {
+ $("#id1").text("successfully Load Id1");
+ }
+ $(document).ready(function () {
+ $("#id2").text("successfully Load Id2");
+ });
+ $(function () {
+ $("#id3").text("successfully Load Id3");
+ });
+ $(function () {
+ $("div").click( function () {
+ $(this).text("New DIV area");
+ });
+ });
+ $(function () {
+ $("#d1").click( function () {
+ $(this).html("<h1>New HTML DIV area<h1>");
+ });
+ });
+</script>
+</head>
+<body>
+<p id="id1"> Hello world</p>
+<p id="id2"> Hello world</p>
+<p id="id3"> Hello world</p>
+<div> DIV Area </div>
+<div id="d1"> DIV Area </div>
+</body>
+</html>

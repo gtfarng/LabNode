@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>test JQuery</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+<p id="id1"> Hello world</p>
+<p id="id2"> My P ID2 </p>
+<p id="id3"> My P ID3 </p>
+<button onclick="alert('Hello');"> Alert </button>
+<button onclick="changeP();" > Change P </button>
+<script>
+ jQuery("#id2").click( function () {
+ jQuery("#id2").text("Foo bar");
+ });
+ $("#id3").click( function () {
+ $(this).text("Short form");
+ });
+ $("#id3").css("border-style","dashed");
+ $("#id3").click(function() {
+ $(this).fadeOut(3000);
+ $(this).fadeIn(3000);
+ });
+</script>
+
+
+</body>
+</html>
