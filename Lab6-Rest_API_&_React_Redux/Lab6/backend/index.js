@@ -4,8 +4,8 @@ const router = express.Router();
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-let bears = [{id: 1, name: 'Winnie', weight: 99},
-    {id: 2, name: 'Pooh', weight: 66}]
+let bears = [{id: 0, name: 'Winnie', weight: 99},
+    {id: 1, name: 'Pooh', weight: 66}]
 
 app.use(cors())
 app.use('/api', bodyParser.json() ,router)
