@@ -1,0 +1,48 @@
+run:
+  deadline: 5m
+  skip-files:
+  - "rice-box.go$"
+
+issues:
+  # Maximum issues count per one linter. Set to 0 to disable. Default is 50.
+  max-issues-per-linter: 0
+  # Maximum count of issues with the same text. Set to 0 to disable. Default is 3.
+  max-same-issues: 0
+
+  # We want to try and improve the comments in the k6 codebase, so individual
+  # non-golint items from the default exclusion list will gradually be addded
+  # to the exclude-rules below
+  exclude-use-default: false
+
+  exclude-rules:
+   # Exclude duplicate code checking in test files (due to common repeats in
+   # test setup code)
+   - path: _test\.go
+     linters:
+       - dupl
+
+  exclude:
+   #TODO: remove this exclusion after https://github.com/golang/lint/issues/381
+   # is fixed by https://github.com/golang/lint/pull/380 or something else
+   - "should have a package comment, unless it's in another file for this package"
+
+linters-settings:
+  govet:
+    check-shadowing: true
+  golint:
+    min-confidence: 0
+  gocyclo:
+    min-complexity: 25
+  maligned:
+    suggest-new: true
+  dupl:
+    threshold: 150
+  goconst:
+    min-len: 5
+    min-occurrences: 4
+
+linters:
+  enable-all: true
+  disable:
+  - gochecknoinits
+  fast: false
